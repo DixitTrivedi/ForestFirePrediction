@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>FirePrediction</title>
+
+  <!-- CSS  --> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Forest Fire Prevention</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Forest-Fire Occurence
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Temperature Choose(1-100)</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Oxygen Choose(1-100)</b></label>
+            <br>
+          <input id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Humidity Choose(1-100)</b></label>
+            <br>
+          <input id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+      <div style="font-size: 25px; margin: auto; text-align: center;flood-color: color;">
+        {{pred}}<br>
+    </div>
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+ <div style="background-color: #ff9800; padding: 10px; margin: auto;">
+    <h6 style="text-align: center; font-family: 'Ubuntu'">Made by <b><a href="https://www.linkedin.com/in/dixit-trivedi/">Dixit Trivedi</a></b>  With 🧡</h6>
+ </div>
+
+  
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
